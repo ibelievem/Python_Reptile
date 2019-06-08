@@ -1,4 +1,4 @@
-from urllib import parse,request
+from urllib import parse,request,error
 import json
 
 #有道翻译url
@@ -18,19 +18,31 @@ parameter = {
 url=url+parse.urlencode(parameter)
 print(url)
 
-#data参数为空，是get请求
-res=request.urlopen(url).read().decode()
 
-# class 'str'>,得到的是字符串类型
-print(res)
-print(type(res))
+##捕捉异常
+try:
+    #data参数为空，是get请求
+    res=request.urlopen(url).read().decode()
+    print(res)
+    print(type(res))
+except error.URLError as e:
+    if (hasattr(e,'code')):
+        print("http error"+str(e.code))
+
+    if (hasattr(e,'reason')):
+        print("url error"+str(e.reason))
 
 
-#拿到的是json字符串，把字符串转化为python对象：dict、list
-pythonObj=json.loads(res)
-print(pythonObj)
-print(type(pythonObj))
-
-for data in pythonObj:
-    print(data)
-    print(data['title'])
+# # class 'str'>,得到的是字符串类型
+# print(res)
+# print(type(res))
+#
+#
+# #拿到的是json字符串，把字符串转化为python对象：dict、list
+# pythonObj=json.loads(res)
+# print(pythonObj)
+# print(type(pythonObj))
+#
+# for data in pythonObj:
+#     print(data)
+#     print(data['title'])
