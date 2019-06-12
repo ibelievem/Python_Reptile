@@ -28,26 +28,37 @@ xmlStr = """
 # 把xml格式的字符串 转化为一个树形结构
 root = etree.XML(xmlStr)
 
+
 # 所有的过滤条件都要写在中括号里边[]
 
-# 按位置进行过滤
-#[数字索引] 按索引位置取元素 从1开始的
+# ●按位置进行过滤
+# 1、[数字索引] 按索引位置取元素 从1开始的
 # result = root.xpath("//coffee[2]")
-#[last()] 按索引位置取元素 等同于索引的-1
+
+# 2、[last()] 按索引位置取元素，取最后一个元素
 # result = root.xpath("//book[last()]")
-# [last()-1] 按索引位置取元素 等同于索引的-2
+
+# 3、[last()-1] 按索引位置取元素，取倒数第二个元素
 # result = root.xpath("//book[last()-1]")
-#[position()>1] 类似切片 [1:] [:3]
+
+# 4、[position()>1] 取位置大于1的所有元素
 # result = root.xpath("//book[position()>1]")
 
-# 按属性进行过滤
+
+# ●按属性进行过滤
+# 1、选取拥有该属性的元素
 # result = root.xpath("//book[@id]")
-# 不仅要求拥有属性名还要求属性值
+
+# 2、获取拥有属性名和属性值的元素
 # result = root.xpath('//book[@id="book2"]')
-result = root.xpath('//coffee/name[@type="coffee"]/text()')
-# 要有子集元素有某一个标签，内部值需要满足可以转化为数字
+
+# 3、获取拥有属性名和属性值的元素的内容
+# result = root.xpath('//coffee/name[@type="coffee"]/text()')
+
+# 4、要有子集元素有某一个标签，内部值需要满足可以转化为数字
 # 满足不等式
-# result = root.xpath('//book[price<20]')
+result = root.xpath('//book[price<20]')
+
 
 for tag in result:
     try:
@@ -55,3 +66,4 @@ for tag in result:
         print(etree.tostring(tag).decode())
     except:
         print(tag)
+

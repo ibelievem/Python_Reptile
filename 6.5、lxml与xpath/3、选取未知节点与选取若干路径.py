@@ -27,6 +27,7 @@ xmlStr = """
 
 # 把xml格式的字符串 转化为一个树形结构
 root = etree.XML(xmlStr)
+
 # . = /bookstore
 # 通配某一个节点下的所有子标签
 # result = root.xpath('./*')

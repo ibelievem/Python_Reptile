@@ -1,10 +1,12 @@
 import requests
 from lxml import etree
 import time
+import os
 
 def DownLoad(start,end,name):
     index = 0
     print(start,end,name)
+    os.mkdir("image")
     for i in range((start-1)*50,(end-1)*50+1,50):
         index = index + 1
         #构造参数

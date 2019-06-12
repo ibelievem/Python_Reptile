@@ -4,7 +4,7 @@ url = 'http://ip.27399.com/'
 
 
 # 1、构造一个字典传入一个代理地址
-proxy = {"http":"//106.13.117.143:3128"}
+proxy = {"http":"106.13.117.143:3128"}
 
 # 2、构建代理地址
 proxyHandler = request.ProxyHandler(proxy)

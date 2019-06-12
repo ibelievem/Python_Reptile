@@ -1,7 +1,7 @@
 import requests
 from lxml import etree
 import time
-from proxyTool import ProxyTool
+from .proxyTool import ProxyTool
 
 schoolHomeUrlDic = {}
 
