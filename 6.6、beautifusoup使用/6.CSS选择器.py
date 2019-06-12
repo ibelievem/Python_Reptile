@@ -21,25 +21,58 @@ html_doc = """
 # 构造树形结构 etree.HTML()
 soup = BeautifulSoup(html_doc,"lxml")
 
-#root.xpath(表达式) //标签名
-# result = soup.select("a")
-# //标签名/@属性名
-# print(item["href"])
 
-# //*[@class="属性值"]
+# 1、通过标签名查找   语法格式：soup.select('标签名')
+#  等同于之前的 soup.xpath(“//标签名”)
+# result = soup.select("a")  # 查找所有的a标签,结果为列表类型
+# print(type(result))
+# print(len(result))
+# for item in result:
+#     print(item)
+#     print(item["href"])      # 等同于 //标签名/@属性名 ，打印满足条件的属性值
+
+
+# 2、通过类名查找   语法格式：soup.select('.类名')
+# 等同于 //*[@class="属性值"]
 # result = soup.select(".sister")
-# //*[@id="属性值"]
+# print(len(result))
+# for item in result:
+#     print(item)
+
+
+# 3、通过id查找   语法格式： soup.select('#id名字')
+#  等同于 //*[@id="属性值"]
 # result = soup.select("#link1")
-# //head/title
+# print(len(result))
+# for item in result:
+#     print(item)
+
+
+
+# 4、组合查找：直接子集查找   等同于 //head/title
 # result = soup.select("head > title")
-# //body//*[@id="link1"]
+# print(type(result))
+# print(len(result))
+# for item in result:
+#     print(item)
+
+
+# 4、组合查找：所有子孙集查找   等同于 //body//*[@id="link1"]
+# 满足body下所有拥有id=link的所有子孙集
 # result = soup.select("body #link1")
+# print(type(result))
+# print(len(result))
+# for item in result:
+#     print(item)
+
+
+# 5、属性查找
 # //p[@id="link1"]   'img[class=""]["bpic"]'
 # result = soup.select('p[id="link1"]')
 # //body//a[@href="http://example.com/elsie"]
-result = soup.select('body a[href="http://example.com/elsie"]')
+# result = soup.select('body a[href="http://example.com/elsie"]')
 
-print(len(result))
-for item in result:
-    print(item)
+
+
+
 
