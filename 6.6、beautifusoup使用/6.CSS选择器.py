@@ -66,11 +66,18 @@ soup = BeautifulSoup(html_doc,"lxml")
 #     print(item)
 
 
-# 5、属性查找
-# //p[@id="link1"]   'img[class=""]["bpic"]'
+# 5、属性查找，属性和标签的双重过滤
+# 等同于 //p[@id="link1"]
 # result = soup.select('p[id="link1"]')
-# //body//a[@href="http://example.com/elsie"]
-# result = soup.select('body a[href="http://example.com/elsie"]')
+# print(len(result))
+# for item in result:
+#     print(item)
+
+# 等同于 //body//a[@href="http://example.com/elsie"]
+result = soup.select('body a[href="http://example.com/elsie"]')
+print(len(result))
+for item in result:
+    print(item)
 
 
 

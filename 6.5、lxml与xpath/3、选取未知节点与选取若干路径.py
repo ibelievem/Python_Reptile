@@ -33,7 +33,7 @@ root = etree.XML(xmlStr)
 # result = root.xpath('./*')
 # result = root.xpath('//book | //coffee | //time')
 
-# string.find
+
 # contains 包含判断  符合标签名之后 判断某一个属性是否包含一个字符串
 # . = [contains(text() + @*,"学习")]
 # result = root.xpath('//name[contains(text(),"学习")]')
