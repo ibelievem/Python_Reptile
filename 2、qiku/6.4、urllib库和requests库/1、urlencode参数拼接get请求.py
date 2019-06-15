@@ -1,3 +1,5 @@
+#get请求拼接到url中
+
 from urllib import parse,request
 
 url="http://www.baidu.com/s?"

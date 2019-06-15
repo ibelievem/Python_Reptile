@@ -1,3 +1,5 @@
+# post请求拼接到 请求体 中
+
 from urllib import parse,request
 import json
 
@@ -37,5 +39,5 @@ pythonObj=json.loads(res)
 print(pythonObj,type(pythonObj))
 
 
-#按照索引取结果
+# #按照索引取结果
 print(pythonObj["translateResult"][0][0]["tgt"])
