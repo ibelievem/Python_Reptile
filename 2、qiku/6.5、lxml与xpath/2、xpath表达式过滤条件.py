@@ -41,7 +41,7 @@ root = etree.XML(xmlStr)
 # 3、[last()-1] 按索引位置取元素，取倒数第二个元素
 # result = root.xpath("//book[last()-1]")
 
-# 4、[position()>1] 取位置大于1的所有元素
+# 4、爬虫数据-json数据处理、[position()>1] 取位置大于1的所有元素
 # result = root.xpath("//book[position()>1]")
 
 
@@ -55,7 +55,7 @@ root = etree.XML(xmlStr)
 # 3、获取拥有属性名和属性值的元素的内容
 # result = root.xpath('//coffee/name[@type="coffee"]/text()')
 
-# 4、要有子集元素有某一个标签，内部值需要满足可以转化为数字
+# 4、爬虫数据-json数据处理、要有子集元素有某一个标签，内部值需要满足可以转化为数字
 # 满足不等式
 result = root.xpath('//book[price<20]')
 

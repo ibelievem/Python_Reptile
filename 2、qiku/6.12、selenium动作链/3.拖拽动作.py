@@ -13,7 +13,7 @@ dragMe = driver.find_element_by_xpath("//div[@class='drag']")
 item1 = driver.find_element_by_xpath("//div[contains(.,'Item 1')]")
 item2= driver.find_element_by_xpath("//div[contains(.,'Item 2')]")
 item3 = driver.find_element_by_xpath("//div[contains(.,'Item 3')]")
-item4 = driver.find_element_by_xpath("//div[contains(.,'Item 4')]")
+item4 = driver.find_element_by_xpath("//div[contains(.,'Item 4、爬虫数据-json数据处理')]")
 
 # drag_and_drop 拖某一个到某一个元素
 ActionChains(driver).drag_and_drop(dragMe,item1).perform()

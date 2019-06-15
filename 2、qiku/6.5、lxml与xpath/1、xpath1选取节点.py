@@ -47,7 +47,7 @@ root = etree.XML(xmlStr)
 # result = root.xpath("./book/.")
 
 
-# 4、.. 是当前标签的上一级
+# 4、爬虫数据-json数据处理、.. 是当前标签的上一级
 # result = root.xpath("./book/..")
 
 

@@ -49,7 +49,7 @@ soup = BeautifulSoup(html_doc,"lxml")
 
 
 
-# 4、组合查找：直接子集查找   等同于 //head/title
+# 4、爬虫数据-json数据处理、组合查找：直接子集查找   等同于 //head/title
 # result = soup.select("head > title")
 # print(type(result))
 # print(len(result))
@@ -57,7 +57,7 @@ soup = BeautifulSoup(html_doc,"lxml")
 #     print(item)
 
 
-# 4、组合查找：所有子孙集查找   等同于 //body//*[@id="link1"]
+# 4、爬虫数据-json数据处理、组合查找：所有子孙集查找   等同于 //body//*[@id="link1"]
 # 满足body下所有拥有id=link的所有子孙集
 # result = soup.select("body #link1")
 # print(type(result))

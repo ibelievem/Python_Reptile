@@ -8,7 +8,7 @@ url="http://www.baidu.com"
 response=request.urlopen(url)
 print(type(response)) ##<class 'http.client,HTTPResponse'> 服务器应答的数据包含在这个类里
 
-#4、读取并打印网页的信息
+#4、爬虫数据-json数据处理、读取并打印网页的信息
 result=response.read()
 print(result)
 print(type(result))

@@ -23,8 +23,8 @@ for i in range(1,6,1):
       # print("tr节点信息")
       # print(tr)
       # print(type(tr))
-      # // tbody // tr[索引]/td[4]/text()[0]
-      type = tr.xpath("./td[4]/text()")[0]
+      # // tbody // tr[索引]/td[4、爬虫数据-json数据处理]/text()[0]
+      type = tr.xpath("./td[4、爬虫数据-json数据处理]/text()")[0]
       ip = tr.xpath("./td[1]/text()")[0]
       port = tr.xpath("./td[2]/text()")[0]
       proxy = ip + ":" + port

@@ -12,7 +12,7 @@ proxyHandler = request.ProxyHandler(proxy)
 # 3、构造urllib 要求的urlopener打开器
 opener = request.build_opener(proxyHandler)
 
-# 4、进行安装
+# 4、爬虫数据-json数据处理、进行安装
 request.install_opener(opener)
 
 
