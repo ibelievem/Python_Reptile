@@ -101,6 +101,7 @@ import re
 # print(result)
 
 
+
 # =================================================
 
 # 【贪婪模式和非贪婪模式】
@@ -108,36 +109,42 @@ import re
 # 非贪婪模式：在整个表达式匹配成功的前提下，尽可能少的匹配 ( ? )；
 # Python里数量词默认是贪婪的
 
-str = "abbbbbbc"
+# 例一、
+# str = "abbbbbbc"
 
 # # 贪婪模式
 # # * 决定了尽可能多匹配 b，所以a后面所有的 b 都出现了。
-pattern = re.compile(r"ab*")
-print(pattern.match(str).group())
+# pattern = re.compile(r"ab*")
+# print(pattern.match(str).group())
 
 
 # # 非贪婪模式
 # # *? 决定了尽可能少匹配b，结果是a 取得最小值
 # pattern = re.compile(r"ab*?")
 # print(pattern.match(str).group())
-#
+
 # # 非贪婪模式
 # # ? 数量谓语 0 或 1 取的最大值
 # pattern = re.compile(r"ab?")
 # print(pattern.match(str).group())
-#
-#
-# str = "<html><div>aa<div>杂乱数据</div><span>目标数据</span></div><div>bb</div></html>"
+
+
+
+# 例二、
+str = "<html><div>aa<div>杂乱数据</div><span>目标数据</span></div><div>bb</div></html>"
+
 # # 贪婪模式
 # # 尽可能的多匹配 找到最后一个</div>为后边界
-# # <html>.*<html>
+# <html>.*</html>
+# re.S 使.匹配包括换行在内的所有字符
 # pattern = re.compile("<div>.*</div>",re.S)
 # print(pattern.findall(str))
-#
+
+
 # # 非贪婪模式
 # # 尽可能的少匹配 找到第一个</div>为后边界
-# pattern = re.compile("<div>.*?</span>",re.S)
-# print(pattern.findall(str))
+pattern = re.compile("<div>.*?</div>",re.S)
+print(pattern.findall(str))
 # print(re.findall("<div>.*?</span>",str,re.S))
 
 

@@ -52,11 +52,11 @@ root = etree.XML(xmlStr)
 
 
 # 5、@ 获取标签内的属性值
-result = root.xpath("//book/@id")
+# result = root.xpath("//book/@id")
 
 
 # 6、text() 取标签元素的内容
-# result = root.xpath("//book/name/text()")
+result = root.xpath("//book/name/text()")
 
 
 # 遍历对象列表
