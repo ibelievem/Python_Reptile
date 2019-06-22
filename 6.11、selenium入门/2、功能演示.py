@@ -4,14 +4,19 @@ import time
 
 # 声明一个驱动对象
 driver = webdriver.Firefox()
+
 # 请求页面
 driver.get("http://www.baidu.com")
-# 页面源代码
+
+# 获得页面源代码
 print(driver.page_source)
-# 当前链接
+
+# 获得当前链接
 print(driver.current_url)
+
 # 获取cookies
 print(driver.get_cookies())
+
 # 标题
 print(driver.title)
 
