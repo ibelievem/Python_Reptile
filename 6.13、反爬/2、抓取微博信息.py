@@ -1,12 +1,14 @@
 from selenium import webdriver
 import time
 
-url = "https://weibo.com/p/1003061826792401?is_hot=1"
-driver = webdriver.Firefox()
+url='https://weibo.com/p/1003061826792401?is_hot=1'
+
+driver=webdriver.Chrome()
 driver.get(url)
 
-time.sleep(10)
-print(driver.page_source)
+# print(driver.page_source)
+
+time.sleep(5)
 
 itemList = driver.find_elements_by_xpath('//div[@class="WB_cardwrap WB_feed_type S_bg2 WB_feed_like "]')
 for item in itemList:
