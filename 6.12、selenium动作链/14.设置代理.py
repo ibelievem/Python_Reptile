@@ -1,10 +1,11 @@
 from selenium import webdriver
 
+# 火狐设置代理
 # profile = webdriver.FirefoxProfile()
 #
 # profile.set_preference('network.proxy.type', 1)
 # profile.set_preference('network.proxy.http', '106.13.117.143')
-# profile.set_preference('network.proxy.http_port', 3128)  # int
+# profile.set_preference('network.proxy.http_port', 3128)   # int
 #
 # profile.update_preferences()
 #
@@ -13,6 +14,7 @@ from selenium import webdriver
 # print(driver.page_source)
 
 
+# 谷歌设置代理
 chromeOptions = webdriver.ChromeOptions()
 
 # 设置代理

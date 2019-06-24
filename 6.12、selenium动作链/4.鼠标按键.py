@@ -19,4 +19,9 @@ keyPress = driver.find_element_by_xpath("//label[contains(.,'Key Press')]")
 # ActionChains(driver).click(keyDown).click(enter).key_down("s",enter).key_up("s",enter).perform()
 # sleep(2)
 
+
+# 常用的方式：
 enter.send_keys("alsjdhfouah")
+
+sleep(2)
+driver.quit()

@@ -1,3 +1,4 @@
+# 火狐谷歌的无界面浏览器的配置
 # chrome headless
 # firefox headless
 

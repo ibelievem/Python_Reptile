@@ -14,7 +14,11 @@ driver.get(url)
 liList=driver.find_elements_by_xpath('//li[@data-scroll-track]')
 print(len(liList))
 
+time.sleep(1)
+
 for i in liList:
+    print(i)
+    print(type(i))
     shape=i.find_element_by_xpath('.//h2[@class="t"]').text
     year=i.find_element_by_xpath('.//div[@class="t-i"]').text
     price=i.find_element_by_xpath('//div[@class="t-price"]/p').text

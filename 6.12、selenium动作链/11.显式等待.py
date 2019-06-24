@@ -9,6 +9,7 @@ from selenium.webdriver.common.by import By
 
 driver = webdriver.Firefox()
 driver.get("https://www.taobao.com/")
+
 try:
     # 循环等待对象
     webDriverWait = WebDriverWait(driver,5)
